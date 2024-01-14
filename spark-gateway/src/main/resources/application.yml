@@ -1,0 +1,42 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        cors-configurations:
+          '[/**]':
+              allowedOrigins: "*"
+              allowedMethods: "*"
+              allowedHeaders: "*"
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: spark-api-app
+          uri: lb://spark-api-app
+          predicates:
+            - Path=/v1/api/spark/**
+        - id: kafka-producer-app
+          uri: lb://kafka-producer-app
+          predicates:
+            - Path=/v1/api/producers/**
+        - id: kafka-consumer-app
+          uri: lb://kafka-consumer-app
+          predicates:
+            - Path=v1/api/consumer/**
+        - id: order-service-app
+          uri: lb://order-service-app
+          predicates:
+            - Path=v1/api/orders/**
+
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url: http://localhost:8761/eureka/

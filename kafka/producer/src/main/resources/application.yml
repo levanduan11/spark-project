@@ -1,0 +1,32 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: kafka-producer-app
+  cloud:
+    function:
+      definition: orderBuySupplier;orderSellSupplier
+    stream:
+      function:
+        definition: orderBuySupplier;orderSellSupplier
+      bindings:
+        orderBuySupplier-out-0:
+          destination: orders.buy
+        orderSellSupplier-out-0:
+          destination: orders.sell
+      kafka:
+        bindings:
+          orderBuySupplier-out-0:
+            destination: orders.buy
+            producer:
+              configuration:
+                key.serializer: org.apache.kafka.common.serialization.LongSerializer
+
+          orderSellSupplier-out-0:
+            destination: orders.sell
+            producer:
+              configuration:
+                key.serializer: org.apache.kafka.common.serialization.LongSerializer
+
+

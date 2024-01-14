@@ -1,0 +1,20 @@
+server:
+  port: 0
+spring:
+  application:
+    name: kafka-consumer-app
+  cloud:
+    function:
+      definition: orders
+    stream:
+      bindings:
+        orders-in-0:
+          destination: orders.buy
+        orders-in-1:
+          destination: orders.sell
+      kafka:
+        streams:
+          binder:
+            functions:
+              orders:
+                applicationId: orders

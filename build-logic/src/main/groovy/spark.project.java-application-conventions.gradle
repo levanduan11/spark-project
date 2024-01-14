@@ -1,0 +1,6 @@
+//file:noinspection GroovyAssignabilityCheck
+
+plugins {
+    // Apply the common convention plugin for shared build configuration between library and application projects.
+    id 'spark.project.java-common-conventions'
+}

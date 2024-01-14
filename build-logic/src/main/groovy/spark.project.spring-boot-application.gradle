@@ -1,0 +1,22 @@
+//file:noinspection GroovyAssignabilityCheck
+plugins{
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+ext {
+    set('lombokVersion','1.18.30')
+    set('springCloudVersion', "2023.0.0")
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}

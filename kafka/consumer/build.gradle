@@ -1,0 +1,11 @@
+//file:noinspection GroovyAssignabilityCheck
+plugins{
+    id 'spark.project.java-application-conventions'
+    id 'spark.project.spring-boot-application'
+}
+dependencies {
+    implementation(project(':domain-model'))
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.cloud:spring-cloud-stream-binder-kafka-streams'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+}

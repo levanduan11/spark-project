@@ -1,0 +1,33 @@
+server:
+  port: 99
+spring:
+  application:
+    name: order-service-app
+  cloud:
+    function:
+      definition: stringSupplier;consumeString
+    stream:
+      default:
+        producer:
+          useNativeEncoding: false
+        consumer:
+          useNativeDecoding: false
+      function:
+        definition: stringSupplier;consumeString
+      kafka:
+        binder:
+          producer-properties:
+            key.serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+            value.serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+            consumer-properties:
+              key.deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+              value.deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+      bindings:
+        stringSupplier-out-0:
+          destination: testTopic
+          #contentType: String
+        consumeString-in-0:
+          destination: testTopic
+          contentType: application/json
+
+

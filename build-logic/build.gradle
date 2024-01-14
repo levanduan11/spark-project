@@ -1,0 +1,17 @@
+//file:noinspection GroovyAssignabilityCheck
+
+plugins {
+    id 'groovy-gradle-plugin'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.21'
+}
+ext {
+    set('springBootVersion' ,'3.2.1')
+}
+
+repositories {
+    gradlePluginPortal()
+}
+dependencies {
+    implementation platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+    implementation "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+}

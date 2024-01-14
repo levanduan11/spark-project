@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/spark-project.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/spark-project.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain-model/spark-project.domain-model.main.iml" filepath="$PROJECT_DIR$/.idea/modules/domain-model/spark-project.domain-model.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka/consumer/spark-project.kafka.consumer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka/consumer/spark-project.kafka.consumer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka/order-service/spark-project.kafka.order-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka/order-service/spark-project.kafka.order-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka/producer/spark-project.kafka.producer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka/producer/spark-project.kafka.producer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/list/spark-project.list.main.iml" filepath="$PROJECT_DIR$/.idea/modules/list/spark-project.list.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark-discovery/spark-project.spark-discovery.main.iml" filepath="$PROJECT_DIR$/.idea/modules/spark-discovery/spark-project.spark-discovery.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark-gateway/spark-project.spark-gateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/spark-gateway/spark-project.spark-gateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utilities/spark-project.utilities.main.iml" filepath="$PROJECT_DIR$/.idea/modules/utilities/spark-project.utilities.main.iml" />
+    </modules>
+  </component>
+</project>

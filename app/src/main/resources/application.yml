@@ -1,0 +1,13 @@
+server:
+  port: ${PORT:0}
+spring:
+  profiles:
+    active:
+      - ${ACTIVE:dev}
+  application:
+    name: ${APP_NAME}
+  datasource:
+    url: jdbc:postgresql://localhost:5432/boot-app
+    username: postgres
+    password: 123
+    driver-class-name: org.postgresql.Driver
